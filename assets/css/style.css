@@ -1,0 +1,64 @@
+html,
+body {
+    background-color: #3aafa9;
+}
+
+.header {
+    text-align: center;
+    padding: 33px;
+}
+
+.scoreboard {
+    text-align: center;
+
+}
+
+h3 {
+    text-align: center;
+}
+
+.diamonds {
+    text-align: center;
+    padding: 33px;
+    background-color: #def2f1;
+}
+
+.diamond {
+    color: green;
+}
+
+.diamond:hover {
+    color: black;
+}
+
+
+.diamond2 {
+    color: yellow;
+
+}
+
+.diamond2:hover{
+    color: black;
+}
+
+
+.diamond3 {
+    color: red;
+    
+}
+
+.diamond3:hover {
+    color: black;
+
+}
+
+
+.diamond4 {
+    color: blue;
+
+}
+
+.diamond4:hover {
+    color: black;
+
+}
