@@ -46,6 +46,8 @@ $(document).ready(function() {
             alert("You win!");
             winCount++;
             $(".win").text(winCount);
+            // reset randomNum
+            //reset total
         }
 
         if (total > randomNum) {
@@ -54,6 +56,8 @@ $(document).ready(function() {
             console.log("you lose");
             lossCount++;
             $(".loss").text(lossCount);
+            // reset randomNum
+            //reset total
         }
 
     });
@@ -68,6 +72,8 @@ $(document).ready(function() {
             alert("You win!");
             winCount++;
             $(".win").text(winCount);
+            // reset randomNum
+            //reset total
     
         }
 
@@ -77,6 +83,8 @@ $(document).ready(function() {
             console.log("you lose");
             lossCount++;
             $(".loss").text(lossCount);
+            // reset randomNum
+            //reset total
 
         }
 
@@ -92,6 +100,8 @@ $(document).ready(function() {
             alert("You win!");
             winCount++;
             $(".win").text(winCount);
+            // reset randomNum
+            //reset total
         }
 
 
@@ -101,6 +111,8 @@ $(document).ready(function() {
             console.log("you lose");
             lossCount++;
             $(".loss").text(lossCount);
+            // reset randomNum
+            //reset total
             
         }
     });
