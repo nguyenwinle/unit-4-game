@@ -1,75 +1,108 @@
 $(document).ready(function() {
      
-    // // create an array for our alphabet;
-    // var alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
-    // // set a random letter to a variable
-    // var randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
+    var winCount = 0;
+    var lossCount = 0;
+    var randomNum = Math.floor(Math.random() * 100);
+    var total  = 0;
+    var crystals = {
+        one: 0,
+        two: 1,
+        three: 2,
+        four: 3
+    }
+    
+    $(".random").text(randomNum);
 
-    // // set up counter variables for wins, losses, guesses left and letters guessed.
-    // var winCount = 0;
-    // var lossCount = 0;
-    // var guesses = 10;
-    // var guessLetters = [];
+    $(".diamond").on("click", function() {
 
-    // // use onkeyup function for when the letter is pressed and when the user lets go of button
-    // document.onkeyup = function(event) {
+        crystals.one++;
+        total += crystals.one;
+        $(".score").text(total);
 
-    //     // set the key to Userguess
-    //     var userGuess = event.key;
+        if (total === randomNum) {
+            alert("You win!");
+            winCount++;
+            $(".win").text(winCount);
+        }
 
-    //     // letters only
- 
-    //     // when the user hits a key
-    //         // decrement total guesses
-    //         // add the key to the empty array
-    //         // add our guesses and guesses to our html
-    //     if (/^[a-zA-Z]/.test(userGuess) && userGuess.length === 1) {
-    //         if (userGuess) {
-    //             guesses--;
-    //             guessLetters.push(userGuess);
-    //             document.querySelector(".guessleft").innerHTML = guesses;
+        if (total > randomNum) {
+            console.log(total);
+            alert("You lose!");
+            console.log("you lose");
+            lossCount++;
+            $(".loss").text(lossCount);
+        }
 
-    //             for (var i = 0; i < userGuess.length; i++) {
-    //                 $(".yourguesses").append('<div class = "col-md-1">' + userGuess + '</div>');
-    //                 //document.querySelector(".col-md-1").innerHTML = guessLetters;
-    //             }
 
-    //         }
+    });
 
-    //         // when the users guess is the same as the random letter
-    //             // increment win count
-    //             // then reset everything except our losses and wins
-    //         if (userGuess === randomLetter) {
-    //             winCount = winCount + 1;
-    //             document.querySelector(".guessleft").innerHTML = "10";
-    //             guesses = 10;
-    //             document.querySelector(".yourguesses").innerHTML = "";
-    //             guessLetters = [];
-    //             document.querySelector(".win").innerHTML = winCount;
-    //             alert("You win!");       
-    //             randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];  
-                
-    //         }
+    $(".diamond2").on("click", function() {
 
-    //         // when the guesses reach 0
-    //             // decrement losses and add it to our html
-    //             // reset everything except losses and wins
-    //         if (guesses === 0) {
-    //             lossCount++;
-    //             document.querySelector(".loss").innerHTML = lossCount;
-    //             alert("You lose!");
-    //             document.querySelector(".guessleft").innerHTML = "10";
-    //             guesses = 10;
-    //             document.querySelector(".yourguesses").innerHTML = "";
-    //             guessLetters = [];  
-    //             randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)]; 
+        crystals.two++;
+        total += crystals.two;
+        $(".score").text(total);
 
-                 
-    //         }
-    //     } else {
-    //         alert("Invalid guess!");
-    //     }
-    // }
+        if (total === randomNum) {
+            alert("You win!");
+            winCount++;
+            $(".win").text(winCount);
+        }
 
+        if (total > randomNum) {
+            console.log(total);
+            alert("You lose!");
+            console.log("you lose");
+            lossCount++;
+            $(".loss").text(lossCount);
+        }
+
+    });
+
+    $(".diamond3").on("click", function() {
+
+        crystals.three++;
+        total += crystals.three;
+        $(".score").text(total);
+
+        if (total === randomNum) {
+            alert("You win!");
+            winCount++;
+            $(".win").text(winCount);
+    
+        }
+
+        if (total > randomNum) {
+            console.log(total);
+            alert("You lose!");
+            console.log("you lose");
+            lossCount++;
+            $(".loss").text(lossCount);
+
+        }
+
+    });
+
+    $(".diamond4").on("click", function() {
+
+        crystals.four++;
+        total += crystals.four;
+        $(".score").text(total);
+
+        if (total === randomNum) {
+            alert("You win!");
+            winCount++;
+            $(".win").text(winCount);
+        }
+
+
+        if (total > randomNum) {
+            console.log(total);
+            alert("You lose!");
+            console.log("you lose");
+            lossCount++;
+            $(".loss").text(lossCount);
+            
+        }
+    });
 
 });
