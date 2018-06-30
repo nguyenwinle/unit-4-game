@@ -23,6 +23,16 @@ $(document).ready(function() {
             alert("You win!");
             winCount++;
             $(".win").text(winCount);
+            randomNum = Math.floor(Math.random() * 100);
+            $(".random").text(randomNum);
+            total = 0;
+            crystals.one = 0;
+            crystals.two = 1;
+            crystals.three = 2;
+            crystals.four = 3;
+            $(".score").text(total);
+
+            
         }
 
         if (total > randomNum) {
@@ -31,6 +41,15 @@ $(document).ready(function() {
             console.log("you lose");
             lossCount++;
             $(".loss").text(lossCount);
+            randomNum = Math.floor(Math.random() * 100);
+            $(".random").text(randomNum);
+            total = 0;
+            crystals.one = 0;
+            crystals.two = 1;
+            crystals.three = 2;
+            crystals.four = 3;
+            $(".score").text(total);
+
         }
 
 
@@ -47,7 +66,15 @@ $(document).ready(function() {
             winCount++;
             $(".win").text(winCount);
             // reset randomNum
+            randomNum = Math.floor(Math.random() * 100);
+            $(".random").text(randomNum);
             //reset total
+            total = 0;
+            crystals.one = 0;
+            crystals.two = 1;
+            crystals.three = 2;
+            crystals.four = 3;
+            $(".score").text(total);
         }
 
         if (total > randomNum) {
@@ -57,7 +84,15 @@ $(document).ready(function() {
             lossCount++;
             $(".loss").text(lossCount);
             // reset randomNum
+            randomNum = Math.floor(Math.random() * 100);
+            $(".random").text(randomNum);
             //reset total
+            total = 0;
+            crystals.one = 0;
+            crystals.two = 1;
+            crystals.three = 2;
+            crystals.four = 3;
+            $(".score").text(total);
         }
 
     });
@@ -73,7 +108,15 @@ $(document).ready(function() {
             winCount++;
             $(".win").text(winCount);
             // reset randomNum
+            randomNum = Math.floor(Math.random() * 100);
+            $(".random").text(randomNum);
             //reset total
+            total = 0;
+            crystals.one = 0;
+            crystals.two = 1;
+            crystals.three = 2;
+            crystals.four = 3;
+            $(".score").text(total);
     
         }
 
@@ -84,7 +127,15 @@ $(document).ready(function() {
             lossCount++;
             $(".loss").text(lossCount);
             // reset randomNum
+            randomNum = Math.floor(Math.random() * 100);
+            $(".random").text(randomNum);
             //reset total
+            total = 0;
+            crystals.one = 0;
+            crystals.two = 1;
+            crystals.three = 2;
+            crystals.four = 3;
+            $(".score").text(total);
 
         }
 
@@ -101,7 +152,15 @@ $(document).ready(function() {
             winCount++;
             $(".win").text(winCount);
             // reset randomNum
+            randomNum = Math.floor(Math.random() * 100);
+            $(".random").text(randomNum);
             //reset total
+            total = 0;
+            crystals.one = 0;
+            crystals.two = 1;
+            crystals.three = 2;
+            crystals.four = 3;
+            $(".score").text(total);
         }
 
 
@@ -112,7 +171,15 @@ $(document).ready(function() {
             lossCount++;
             $(".loss").text(lossCount);
             // reset randomNum
+            randomNum = Math.floor(Math.random() * 100);
+            $(".random").text(randomNum);
             //reset total
+            total = 0;
+            crystals.one = 0;
+            crystals.two = 1;
+            crystals.three = 2;
+            crystals.four = 3;
+            $(".score").text(total);
             
         }
     });
