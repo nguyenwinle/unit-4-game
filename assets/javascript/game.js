@@ -2,18 +2,13 @@ $(document).ready(function() {
      
     var winCount = 0;
     var lossCount = 0;
-    var randomNum = Math.floor(Math.random() * 120) + 19;
-    var num = Math.floor(Math.random() * 12) + 1;
-    var total  = 0;
+    var randomNum = Math.floor(Math.random() * 120 + 19);
+    var num = Math.floor(Math.random() * 12 + 1);
+    var num2 = Math.floor(Math.random() * 12 + 1);
+    var num3 = Math.floor(Math.random() * 12 + 1);
+    var num4 = Math.floor(Math.random() * 12 + 1);
+    var total = 0;
 
-    var crystals = {
-        one: 0,
-        two: 1,
-        three: 2,
-        four: 3
-    }
-
-    
     $(".random").text(randomNum);
 
     function update() {
@@ -22,18 +17,15 @@ $(document).ready(function() {
         total = 0;
         $(".score").text(total);
 
-        crystals.one = num;
-        crytals.two = num;
-        crystals.three = num;
-        crystals.four = num;
-        randomNum = Math.floor(Math.random() * 120) + 19;
+        randomNum = Math.floor(Math.random() * 120 + 19);
         $(".random").text(randomNum);
 
     }
 
     $(".diamond").on("click", function() {
-        crystals.one++;
-        total += crystals.one;
+        total += num;
+
+
         $(".score").text(total);
 
         if (total === randomNum) {
@@ -42,8 +34,7 @@ $(document).ready(function() {
             $(".win").text(winCount);
             
             update();
-
-            
+                        
         }
 
         if (total > randomNum) {
@@ -62,8 +53,7 @@ $(document).ready(function() {
 
     $(".diamond2").on("click", function() {
 
-        crystals.two++;
-        total += crystals.two;
+        total += num2;
         $(".score").text(total);
 
         if (total === randomNum) {
@@ -72,6 +62,7 @@ $(document).ready(function() {
             $(".win").text(winCount);
             
             update();
+            total = 0;
 
         }
 
@@ -83,14 +74,14 @@ $(document).ready(function() {
             $(".loss").text(lossCount);
             
             update();
+         
         }
 
     });
 
     $(".diamond3").on("click", function() {
 
-        crystals.three++;
-        total += crystals.three;
+        total += num3;
         $(".score").text(total);
 
         if (total === randomNum) {
@@ -99,6 +90,7 @@ $(document).ready(function() {
             $(".win").text(winCount);
 
             update();
+     
     
         }
 
@@ -117,8 +109,7 @@ $(document).ready(function() {
 
     $(".diamond4").on("click", function() {
 
-        crystals.four++;
-        total += crystals.four;
+        total += num4;
         $(".score").text(total);
 
         if (total === randomNum) {
@@ -143,6 +134,7 @@ $(document).ready(function() {
             update();
             
         }
+    
 
     });
 
